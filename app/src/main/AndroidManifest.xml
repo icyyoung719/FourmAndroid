@@ -34,6 +34,9 @@
         <activity
             android:name=".ui.activity.ShowPostDetail"
             android:exported="false" /> <!-- 如果这个 Activity 不需要从外部启动 -->
+        <activity
+            android:name=".ui.activity.ShowUsers"
+            android:exported="false" />
 
     </application>
 

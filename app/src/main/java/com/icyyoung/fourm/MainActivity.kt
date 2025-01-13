@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.icyyoung.fourm.R
 import com.icyyoung.fourm.ui.activity.ShowPostDetail
+import com.icyyoung.fourm.ui.activity.ShowUsers
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +20,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ShowPostDetail::class.java).apply {
                 putExtra(ShowPostDetail.EXTRA_POST_ID, 3) // Replace with actual post ID
             }
+            startActivity(intent)
+        }
+        // 显示用户列表按钮
+        val buttonShowUsers = findViewById<Button>(R.id.buttonShowUsers)
+        buttonShowUsers.setOnClickListener {
+            val intent = Intent(this, ShowUsers::class.java)
             startActivity(intent)
         }
     }

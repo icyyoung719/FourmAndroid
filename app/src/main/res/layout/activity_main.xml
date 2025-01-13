@@ -3,11 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:padding="16dp"> <!-- 添加一些内边距使界面更美观 -->
 
     <Button
         android:id="@+id/buttonShowPostDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View Post Detail" />
+        android:text="View Post Detail"
+        android:layout_marginBottom="16dp" /> <!-- 为按钮之间添加间距 -->
+
+    <Button
+        android:id="@+id/buttonShowUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Users" />
+
 </LinearLayout>
