@@ -4,8 +4,7 @@ package com.icyyoung.fourm.data.model
 data class Post(
     val id: Int,
     val title: String,
-    val author: String,
-    //    created_at = models.DateTimeField(auto_now_add=True)
+    val author: User,
     val created_at: String,
     val content: String,
     val like_nums: Int,

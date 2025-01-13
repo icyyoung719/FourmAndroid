@@ -8,8 +8,8 @@ package com.icyyoung.fourm.data.model
 data class Comment (
     val id: Int,
     val content: String,
-    val createdAt: String,
+    val created_at: String,
     val author: User,
     val post: Post,
-    val likeNums: Int
+    val like_nums: Int
 )
