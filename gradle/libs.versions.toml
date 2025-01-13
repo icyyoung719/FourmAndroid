@@ -14,7 +14,8 @@ coil-compose = "2.2.2"       # Coil Compose 版本
 timber = "5.0.1"  # Timber 版本
 androidx-core = "1.10.1"     # AndroidX Core KTX 版本
 androidx-lifecycle-runtime = "2.6.1" # AndroidX Lifecycle Runtime KTX 版本
-androidx-activity-compose = "1.7.0" # AndroidX Activity Compose 版本
+androidx-activity-compose = "1.7.0"
+appcompat = "1.7.0" # AndroidX Activity Compose 版本
 
 
 [libraries]
@@ -36,6 +37,7 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitVersion" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-compose" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
