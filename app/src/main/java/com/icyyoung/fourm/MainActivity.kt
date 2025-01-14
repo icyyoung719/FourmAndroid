@@ -1,32 +1,35 @@
 package com.icyyoung.fourm
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
+import android.webkit.WebSettings
+import android.webkit.WebView
 import com.icyyoung.fourm.R
-import com.icyyoung.fourm.ui.activity.ShowPostDetail
-import com.icyyoung.fourm.ui.activity.ShowUsers
+import android.webkit.WebViewClient
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var webView: WebView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 直接通过 findViewById 获取按钮并设置点击监听器
-        val buttonShowPostDetail = findViewById<Button>(R.id.buttonShowPostDetail)
-        buttonShowPostDetail.setOnClickListener {
-            val intent = Intent(this, ShowPostDetail::class.java).apply {
-                putExtra(ShowPostDetail.EXTRA_POST_ID, 1) // Replace with actual post ID
-            }
-            startActivity(intent)
-        }
-        // 显示用户列表按钮
-        val buttonShowUsers = findViewById<Button>(R.id.buttonShowUsers)
-        buttonShowUsers.setOnClickListener {
-            val intent = Intent(this, ShowUsers::class.java)
-            startActivity(intent)
+        webView = findViewById(R.id.webview)
+        webView.webViewClient = WebViewClient()
+
+        // 设置WebView属性
+        val webSettings: WebSettings = webView.settings
+        webSettings.javaScriptEnabled = true
+
+        // 加载Django应用的URL
+        webView.loadUrl("http://123.60.191.197:8000")
+    }
+
+    override fun onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack()
+        } else {
+            super.onBackPressed()
         }
     }
 }

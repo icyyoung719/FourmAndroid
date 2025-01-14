@@ -34,7 +34,7 @@ class ShowPostDetail : ComponentActivity() {
 
         setContent {
             MaterialTheme {
-                ShowPostDetailScreen(viewModel = viewModel)
+                ShowPostDetailScreen(viewModel = viewModel,)
             }
         }
     }
