@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         val buttonShowPostDetail = findViewById<Button>(R.id.buttonShowPostDetail)
         buttonShowPostDetail.setOnClickListener {
             val intent = Intent(this, ShowPostDetail::class.java).apply {
-                putExtra(ShowPostDetail.EXTRA_POST_ID, 3) // Replace with actual post ID
+                putExtra(ShowPostDetail.EXTRA_POST_ID, 1) // Replace with actual post ID
             }
             startActivity(intent)
         }
